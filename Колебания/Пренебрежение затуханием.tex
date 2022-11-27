@@ -1,0 +1,49 @@
+
+\documentclass[a4paper,14pt]{extarticle}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{amsmath,amsfonts,amsthm, mathtools}
+\usepackage{amssymb}
+\usepackage{icomma}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\RequirePackage{longtable}
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{soulutf8} 
+\usepackage{geometry}
+\geometry{top=20mm}
+\geometry{bottom=20mm}
+\geometry{left=20mm}
+\geometry{right=20mm}
+\begin{document}
+\begin{flushleft}
+Уравнение затухающих колебаний:
+$$x=Ae^{-\delta t}{\cos  \left(\omega t+{\varphi }_0\right)\ }\left(4\right)$$
+, где $\omega =\sqrt{{\omega }^2_0-{\delta }^2}$ — частота затухающих колебаний, $Ae^{-\delta t}$ — амплитуда затухающих колебаний. ${\varphi }_0$— постоянная величина, которая зависит от выбора начала отсчета времени.
+
+Коэффициент затухания можно определить как величину обратную времени ($\tau$) за которое амплитуд (A) уменьшается в e раз:
+
+$$\delta =\frac{1}{\tau }\left(5\right)$$
+
+, где $\tau$ — время релаксации. То есть можно записать:
+
+$$\frac{A_1}{A_2}=e^{\delta t} \Leftrightarrow \delta = \frac{\ln(\frac{A_1}{A_2})}{t} \left(6\right)$$
+
+Период затухающих колебаний равен:
+
+$$T=\frac{2\pi }{\sqrt{{\omega }^2_0-{\delta }^2}}\left(7\right)$$
+при несущественном сопротивлении среды, если выполняется неравенство: ${\delta }^2\ll {\omega }^2_0$ период колебаний можно вычислять при помощи формулы:
+
+$$T'=\frac{2\pi }{{\omega }_0}\left(8\right)$$
+рассмотрим $\delta^2$, при условии $\left(*\right) -$ за 10 периодов колебаний амплитуда меняется меньше чем в два раза($\frac{A_1}{A_2} < 2$):
+$$\ln{\frac{A_1}{A_2}} < 1,\;\;\;\; \omega_0 = \frac{2\pi}{T'}$$ 
+$$\frac{T'}{T} = \frac{\sqrt{\omega_0^2 - \delta^2}}{\omega_0} < 1 \Rightarrow T' < T$$
+$$\text{, из $\left(6\right)$:}\;\; \delta^2 = \frac{(\ln{\frac{A_1}{A_2}})^2}{100T^2} \ll \frac{1}{T'^2} < \frac{4\pi^2}{T'^2} = \omega_0^2$$
+, таким образом, если выполняется $\left(*\right)$ можно считать колебания незатухающими. Погрешность такого пренебрежения: 
+$$\sigma_T^{\text{сист}} < \frac{2\pi}{\omega_0}(\frac{1}{\sqrt{0,99}} - 1),\; \text{т.е.} \;\; \varepsilon_T^{\text{сист}} < 0,5\% $$
+
+\end{flushleft}
+\end{document}
